@@ -36,14 +36,10 @@ There are two ways to call the script from Terraform where Option 1 is slighlty 
 
 ### Option 1 - Add a provider block to a terraform_data resource
 
-```powershell
-#
-```
+https://github.com/danielorn/terraform-examples/blob/67f9a3464b424e928ebc5e007887b458391fb12a/terraform-open-extension/main.tf#L5C1-L36C2
 
 ### Option 2 - Add a provider block to the group creation resource
 
-```powershell
-#
-```
+https://github.com/danielorn/terraform-examples/blob/67f9a3464b424e928ebc5e007887b458391fb12a/terraform-open-extension/main.tf#L38C1-L58C2
 
 
