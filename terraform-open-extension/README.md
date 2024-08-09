@@ -8,6 +8,22 @@ This demo sets an [open extension](https://learn.microsoft.com/en-us/graph/exten
 - [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 - [Install Terraform](https://developer.hashicorp.com/terraform/install)
 
+# Getting started
+
+1. To execute the full demo
+    ```sh
+    terraform apply
+    ```
+
+    This will create two groups (`TESTGROUP1`) and (`TESTGROUP2`), both with an extension called `com.example.contacts` where the field `applicationOwner` is set to `john.doe@example.com`.
+
+2. Edit the local called `values` inside `main.tf` to change the `applicationOwner`
+`
+3. Run 
+    ```sh
+    terraform apply
+    ```
+4. Observe how `TESTGROUP1` will have its application owner updated, while `TESTGROUP2` will not. This is because for `TESTGROUP1` the provisioner that adds the extension have its own lifecycle, but for `TESTGROUP2` it runs only when the group is created
 # Details
 
 ## The Set-OpenExtension.ps1 script
